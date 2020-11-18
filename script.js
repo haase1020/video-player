@@ -10,8 +10,13 @@ const speed = document.querySelector('.player-speed');
 const currentTime = document.querySelector('.time-elapsed');
 const duration = document.querySelector('.time-duration');
 const fullscreenBtn = document.querySelector('.fullscreen');
-
+const exampleBox = document.querySelector('.example-box')
 // Play & Pause ----------------------------------- //
+
+
+function boxBye() {
+  exampleBox.style.display = 'none'
+}
 
 function showPlayIcon() {
   playBtn.classList.replace('fa-pause-circle', 'fa-play-circle');
@@ -165,3 +170,4 @@ volumeRange.addEventListener('click', changeVolume);
 volumeIcon.addEventListener('click', toggleMute);
 speed.addEventListener('change', changeSpeed);
 fullscreenBtn.addEventListener('click', toggleFullscreen);
+exampleBox.addEventListener('click',boxBye)

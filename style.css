@@ -37,6 +37,26 @@ video {
   border-radius: 5px;
   width: 100%;
   height: auto;
+ 
+}
+.example-box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+  margin-right: 20px;
+}
+.example-box:hover {
+  width:200px;
+  height:200px;
+}
+
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
 }
 
 /* Containers */
@@ -91,7 +111,7 @@ video {
   width: calc(100% - 30px);
   background: rgba(202, 202, 202, 0.8);
   margin: auto;
-  border-radius: 10px;
+  border-radius: 50px;
   position: absolute;
   left: 15px;
   top: 15px;
@@ -108,7 +128,7 @@ video {
   background: var(--primary-color);
   width: 50%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: all 0.5s ease;
 }
 

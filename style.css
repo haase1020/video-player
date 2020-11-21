@@ -48,10 +48,19 @@ video {
   animation-duration: 3s;  
   animation-fill-mode: forwards;
   margin-right: 20px;
+  border-radius: 100px;
+  text-align:center;
+  padding-top: 7px;
 }
 .example-box:hover {
   width:200px;
   height:200px;
+  border-radius: 100px;
+}
+
+.example-box-text {
+  position: center;
+  color: white;
 }
 
 @keyframes example {

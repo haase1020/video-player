@@ -10,7 +10,8 @@ const speed = document.querySelector('.player-speed');
 const currentTime = document.querySelector('.time-elapsed');
 const duration = document.querySelector('.time-duration');
 const fullscreenBtn = document.querySelector('.fullscreen');
-const exampleBox = document.querySelector('.example-box')
+const exampleBox = document.querySelector('.example-box');
+const title = document.querySelector(".title")
 // Play & Pause ----------------------------------- //
 
 
@@ -129,6 +130,7 @@ function openFullscreen(element) {
     element.msRequestFullscreen();
   }
   video.classList.add('video-fullscreen');
+  title.style.visibility = 'hidden';
 }
 
 /* Close fullscreen */
@@ -146,6 +148,8 @@ function closeFullscreen() {
     document.msExitFullscreen();
   }
   video.classList.remove('video-fullscreen');
+  title.style.visibility = 'visible';
+
 }
 
 let fullscreen = false;
@@ -170,4 +174,3 @@ volumeRange.addEventListener('click', changeVolume);
 volumeIcon.addEventListener('click', toggleMute);
 speed.addEventListener('change', changeSpeed);
 fullscreenBtn.addEventListener('click', toggleFullscreen);
-exampleBox.addEventListener('click',boxBye)
